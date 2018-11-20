@@ -15,7 +15,7 @@ int main()
     Sair();
 
 
-    return 0; CARALHO
+    return 0;
 }
 
   int MenuUtilizador()

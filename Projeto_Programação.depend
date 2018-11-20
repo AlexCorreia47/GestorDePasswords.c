@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1542727829 source:c:\users\alexc\desktop\curso\projeto de programação\projeto_programação\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+

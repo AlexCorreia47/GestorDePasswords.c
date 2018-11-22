@@ -2,80 +2,84 @@
 #include <stdlib.h>
 #include <locale.h>
 
-int Sair();
-int MenuEdit();
-int MenuUtilizador();
-int MenuVisualizar();
-int MenuUsername();
+int sair();
+
+int menuEdit();
+
+int menuUtilizador();
+int menuVisualizar();
+int menuUsername();
+
 
 int main()
 {
-    setlocale(LC_ALL,"");
-    int opcaoMenuPrincipal;
-        do{
 
-            printf("****************************MENU PRINCIPAL****************************");
-            printf("\n\n (1) Inserir novos dados de utilizador");
-            printf("\n (2) Editar dados introduzidos");
-            printf("\n (3) Visualizar dados introduzidos");
-            printf("\n (0) Sair");
-            printf("\n Opção:  ");
-            scanf(" %d", &opcaoMenuPrincipal);
 
-            switch(opcaoMenuPrincipal)
-            {case 1:
-            MenuUtilizador();
-            break;
-            case 2:
-            MenuEdit();
-            break;
-            case 3:
-            MenuVisualizar();
-            break;
-            case 0:
-            break;
-            default: printf("\n Opção Inválida");
-            break;
-            }
 
-    }while(opcaoMenuPrincipal != 0);
     return 0;
 }
 
-int MenuUtilizador()
+int menuPrincipal()
 {
-    int  login;
-    char username;
+    int opcaoMenuPrincipal;
 
-        printf("****************************MENU UTILIZADOR****************************");
-        printf("\n\n (1) Inserir Username");
-        printf("\n (2) Voltar ao menu principal");
-        printf("\n Opção:  ");
-        scanf(" %d", &login);
+    printf("\n****************************MENU PRINCIPAL****************************");
+    printf("\n\n (1) Inserir novos dados");
+    printf("\n (2) Editar dados introduzidos");
+    printf("\n (3) Visualizar dados introduzidos");
+    printf("\n (0) Sair");
+    printf("\n\nOpÃ§Ã£o -> ");
+    scanf("%d", &opcaoMenuPrincipal);
 
-        switch(login)
-        {
+    switch(opcaoMenuPrincipal)
+    {
         case 1:
-        printf("\n Insira o seu username:  ");
-        scanf(" %c", &username);
-        break;
-        case 2:
-        return;
-        break;
-        default: printf("\n Opção Inválida");
-        }
+            break;
+        case 2:MenuEdit();
+            break;
+        case 3:
+            break;
+        case 0:
+            break;
+        default:
+            printf("\n\nOpÃ§Ã£o invÃ¡lida!");
+    }
+}
 
-    return login;
+int menuUtilizador()
+{
+    int opcaoMenuUtilizador;
+
+    printf("\n****************************MENU UTILIZADOR****************************");
+    printf("\n\n (1) Inserir Username");
+    printf("\n (2) Voltar ao menu principal");
+    scanf("%d", &opcaoMenuUtilizador);
+
+    return opcaoMenuUtilizador;
 }
 int MenuEdit()
 {
     int opcaoMenuEdit;
 
-        printf("****************************MENU EDITAR****************************");
-        printf("\n\n (1) Inserir Username");
-        printf("\n (2) Voltar ao menu principal");
-        printf("\n Opção:  ");
-        scanf(" %d", &opcaoMenuEdit);
+        printf("\n****************************MENU EDITAR****************************");
+        printf("\n\n (1) Editar utilizador");
+        printf("\n (2) Editar recurso");
+        printf("\n (3) Editar acesso");
+        printf("\n (0) Voltar ao menu principal");
+        printf("\n\n OpÃ§Ã£o -> ");
+        scanf("%d", &opcaoMenuEdit);
+
+        switch(opcaoMenuEdit)
+        {
+        case 1:
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+        case 0:
+            break;
+        }
 
     return opcaoMenuEdit;
 }
@@ -83,12 +87,10 @@ int MenuVisualizar()
 {
     int opcaoMenuVisualizar;
 
-        printf("****************************MENU VISUALIZAR****************************");
-        printf("\n\n (1) Inserir Username");
-        printf("\n (2) Voltar ao menu principal");
-        printf("\n Opção:  ");
-        scanf(" %d", &opcaoMenuVisualizar);
-
+    printf("\n****************************MENU VISUALIZAR****************************");
+    printf("\n\n (1) Inserir Username");
+    printf("\n (2) Voltar ao menu principal");
+    scanf("%d", &opcaoMenuVisualizar);
 
     return opcaoMenuVisualizar;
 }

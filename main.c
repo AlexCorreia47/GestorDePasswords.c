@@ -10,42 +10,72 @@ int MenuUsername();
 
 int main()
 {
+    setlocale(LC_ALL,"");
     int opcaoMenuPrincipal;
+        do{
 
-    printf("****************************MENU PRINCIPAL****************************");
-    printf("\n\n (1) Inserir novos dados de utilizador");
-    printf("\n (2) Editar dados introduzidos");
-    printf("\n (3) Visualizar dados introduzidos");
-    printf("\n (0) Sair");
-    scanf("%d", &opcaoMenuPrincipal);
+            printf("****************************MENU PRINCIPAL****************************");
+            printf("\n\n (1) Inserir novos dados de utilizador");
+            printf("\n (2) Editar dados introduzidos");
+            printf("\n (3) Visualizar dados introduzidos");
+            printf("\n (0) Sair");
+            printf("\n Opção:  ");
+            scanf(" %d", &opcaoMenuPrincipal);
 
-    switch(opcaoMenuPrincipal)
-    case 1:
-case 2:
-case 3:
-case 0:
+            switch(opcaoMenuPrincipal)
+            {case 1:
+            MenuUtilizador();
+            break;
+            case 2:
+            MenuEdit();
+            break;
+            case 3:
+            MenuVisualizar();
+            break;
+            case 0:
+            break;
+            default: printf("\n Opção Inválida");
+            break;
+            }
+
+    }while(opcaoMenuPrincipal != 0);
     return 0;
 }
 
 int MenuUtilizador()
 {
-    int opcaoMenuUtilizador;
+    int  login;
+    char username;
 
-    printf("****************************MENU UTILIZADOR****************************");
-    printf("\n\n (1) Inserir Username");
-    printf("\n (2) Voltar ao menu principal");
-    scanf("%d", &opcaoMenuUtilizador);
+        printf("****************************MENU UTILIZADOR****************************");
+        printf("\n\n (1) Inserir Username");
+        printf("\n (2) Voltar ao menu principal");
+        printf("\n Opção:  ");
+        scanf(" %d", &login);
 
-    return opcaoMenuUtilizador;
+        switch(login)
+        {
+        case 1:
+        printf("\n Insira o seu username:  ");
+        scanf(" %c", &username);
+        break;
+        case 2:
+        return;
+        break;
+        default: printf("\n Opção Inválida");
+        }
+
+    return login;
 }
 int MenuEdit()
 {
     int opcaoMenuEdit;
 
-    printf("****************************MENU EDITAR****************************");
-    printf("\n\n (1) Inserir Username");
-    printf("\n (2) Voltar ao menu principal");
-    scanf("%d", &opcaoMenuEdit);
+        printf("****************************MENU EDITAR****************************");
+        printf("\n\n (1) Inserir Username");
+        printf("\n (2) Voltar ao menu principal");
+        printf("\n Opção:  ");
+        scanf(" %d", &opcaoMenuEdit);
 
     return opcaoMenuEdit;
 }
@@ -53,10 +83,12 @@ int MenuVisualizar()
 {
     int opcaoMenuVisualizar;
 
-    printf("****************************MENU VISUALIZAR****************************");
-    printf("\n\n (1) Inserir Username");
-    printf("\n (2) Voltar ao menu principal");
-    scanf("%d", &opcaoMenuVisualizar);
+        printf("****************************MENU VISUALIZAR****************************");
+        printf("\n\n (1) Inserir Username");
+        printf("\n (2) Voltar ao menu principal");
+        printf("\n Opção:  ");
+        scanf(" %d", &opcaoMenuVisualizar);
+
 
     return opcaoMenuVisualizar;
 }

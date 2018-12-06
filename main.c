@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
+#define MAX_UTILIZADOR 20
+#define MAX_RECURSO 100
+#define MAX_ACESSO 200
 
 int Sair();
-int MenuEdit();
 int MenuUtilizador();
-int MenuVisualizar();
-int MenuUsername();
+int MenuRecurso();
+int MenuAcesso();
 
 int main()
 {
@@ -15,11 +17,11 @@ int main()
         do{
 
             printf("****************************MENU PRINCIPAL****************************");
-            printf("\n\n (1) Inserir novos dados de utilizador");
-            printf("\n (2) Editar dados introduzidos");
-            printf("\n (3) Visualizar dados introduzidos");
+            printf("\n\n (1) Menu Utilizador");
+            printf("\n (2) Menu Recurso");
+            printf("\n (3) Menu Acesso");
             printf("\n (0) Sair");
-            printf("\n OpÁ„o:  ");
+            printf("\n Op√ß√£o:  ");
             scanf(" %d", &opcaoMenuPrincipal);
 
             switch(opcaoMenuPrincipal)
@@ -27,14 +29,14 @@ int main()
             MenuUtilizador();
             break;
             case 2:
-            MenuEdit();
+            MenuRecurso();
             break;
             case 3:
-            MenuVisualizar();
+            MenuAcesso();
             break;
             case 0:
             break;
-            default: printf("\n OpÁ„o Inv·lida");
+            default: printf("\n Op√ß√£o Inv√°lida");
             break;
             }
 
@@ -48,50 +50,56 @@ int MenuUtilizador()
     char username;
 
         printf("****************************MENU UTILIZADOR****************************");
-        printf("\n\n (1) Inserir Username");
-        printf("\n (2) Voltar ao menu principal");
-        printf("\n OpÁ„o:  ");
+        printf("\n\n (1) Inserir Utilizador");
+        printf("\n (2) Mostrar/Editar Utilizador");
+        printf("\n (3) Voltar ao menu principal");
+        printf("\n Op√ß√£o:  ");
         scanf(" %d", &login);
 
         switch(login)
         {
         case 1:
-        printf("\n Insira o seu username:  ");
+        printf("\n Insira o seu Utilizador:  ");
         scanf(" %c", &username);
         break;
         case 2:
         return;
         break;
-        default: printf("\n OpÁ„o Inv·lida");
+        default: printf("\n Op√ß√£o Inv√°lida");
         }
 
     return login;
 }
-int MenuEdit()
+
+int MenuRecurso()
 {
-    int opcaoMenuEdit;
+    int opcaoMenuRecurso;
 
-        printf("****************************MENU EDITAR****************************");
-        printf("\n\n (1) Inserir Username");
-        printf("\n (2) Voltar ao menu principal");
-        printf("\n OpÁ„o:  ");
-        scanf(" %d", &opcaoMenuEdit);
+        printf("****************************MENU RECURSO****************************");
+        printf("\n\n (1) Inserir Recurso");
+        printf("\n\n (2) Mostrar/Editar Recurso");
+        printf("\n (3) Voltar ao menu principal");
+        printf("\n Op√ß√£o:  ");
+        scanf(" %d", &opcaoMenuRecurso);
 
-    return opcaoMenuEdit;
+    return opcaoMenuRecurso;
 }
-int MenuVisualizar()
+
+int MenuAcesso()
 {
-    int opcaoMenuVisualizar;
+    int opcaoMenuAcesso;
 
-        printf("****************************MENU VISUALIZAR****************************");
-        printf("\n\n (1) Inserir Username");
-        printf("\n (2) Voltar ao menu principal");
-        printf("\n OpÁ„o:  ");
-        scanf(" %d", &opcaoMenuVisualizar);
+        printf("****************************MENU ACESSO****************************");
+        printf("\n\n (1) Inserir Acesso");
+        printf("\n\n (2) Mostrar/Editar Acesso");
+        printf("\n (3) Voltar ao menu principal");
+        printf("\n Op√ß√£o:  ");
+        scanf(" %d", &opcaoMenuAcesso);
 
 
-    return opcaoMenuVisualizar;
+    return opcaoMenuAcesso;
 }
+
 int Sair()
 {
 
@@ -101,3 +109,4 @@ int MenuUsername()
 {
 
 }
+
